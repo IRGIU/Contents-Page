@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Contents - Britain's Populist Turn</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            min-height: 100vh;
+        }
+
+        .header {
+            border-left: 3px solid #fff;
+            padding-left: 20px;
+            margin-bottom: 60px;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        .org-name {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        .doc-type {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.5;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: #fff;
+            margin: 40px 0;
+            animation: expandWidth 1s ease-out 0.3s both;
+        }
+
+        .toc-section {
+            margin-bottom: 60px;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.6s both;
+        }
+
+        .tier-header {
+            margin-bottom: 30px;
+        }
+
+        .tier-title {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .tier-subtitle {
+            font-size: 14px;
+            opacity: 0.6;
+            font-style: italic;
+        }
+
+        .content-group {
+            margin-bottom: 40px;
+            padding-left: 30px;
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .content-number {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            opacity: 0.9;
+        }
+
+        .content-title {
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .content-list {
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        .content-list li {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .content-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            opacity: 0.5;
+        }
+
+        .end-result {
+            margin-top: 60px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.03);
+            animation: fadeIn 0.8s ease-out 1.2s both;
+            opacity: 0;
+        }
+
+        .end-result h2 {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .end-result ul {
+            list-style: none;
+        }
+
+        .end-result li {
+            font-size: 14px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .end-result li:before {
+            content: "●";
+            position: absolute;
+            left: 0;
+        }
+
+        .summary-note {
+            margin-top: 20px;
+            font-size: 13px;
+            opacity: 0.6;
+            font-style: italic;
+        }
+
+        .footer {
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            opacity: 0.5;
+            letter-spacing: 1px;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes expandWidth {
+            from {
+                width: 0;
+            }
+            to {
+                width: 60px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .tier-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="org-name">IRGIU / CANVI</div>
+            <div class="doc-type">Series Structure</div>
+            <h1>Table of Contents</h1>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="toc-section">
+            <div class="tier-header">
+                <div class="tier-title">Tier 1 – Core Landscape (UK Populism)</div>
+                <div class="tier-subtitle">Britain's Populist Turn: The National Picture</div>
+            </div>
+
+            <div class="content-group">
+                <div class="content-number">1. Article</div>
+                <div class="content-title">"Britain's Populist Turn: How Immigration and Identity Are Reshaping the Political Landscape"</div>
+                <ul class="content-list">
+                    <li>From Brexit to broader populism</li>
+                    <li>The Farage/Reform UK effect</li>
+                    <li>Robinson and the Freedom March</li>
+                    <li>Muslims and minorities in the crossfire</li>
+                    <li>The Overton Window shifts</li>
+                    <li>UK in global context</li>
+                    <li>Four plausible futures</li>
+                    <li>The stakes for democracy</li>
+                </ul>
+            </div>
+
+            <div class="content-group">
+                <div class="content-number">2. Intelligence Brief</div>
+                <div class="content-title">"The Rise of Right-Wing Populism in the United Kingdom"</div>
+                <ul class="content-list">
+                    <li>Summary & Key Judgments</li>
+                    <li>Background: economic, cultural, migration drivers</li>
+                    <li>Key Actors & Dynamics: Robinson, Farage, Yusuf</li>
+                    <li>Societal & Policy Impacts: legal, community, economic, security</li>
+                    <li>Scenario Analysis: 4 futures with indicators</li>
+                    <li>Recommendations: policy & community resilience</li>
+                    <li>Annex: RAG Dashboard + Indicators</li>
+                </ul>
+            </div>
+
+            <div class="content-group">
+                <div class="content-number">3. White Paper</div>
+                <div class="content-title">"The Rise of Right-Wing Populism in the United Kingdom: Immigration, Identity, and Political Shifts"</div>
+                <ul class="content-list">
+                    <li>Executive Summary</li>
+                    <li>Introduction</li>
+                    <li>Section 1: Background on the rightward shift</li>
+                    <li>Section 2: Key Events – Freedom March</li>
+                    <li>Section 3: Tommy Robinson & the EDL</li>
+                    <li>Section 4: International Influences (U.S., Israel, digital)</li>
+                    <li>Section 5: Reform UK and Nigel Farage</li>
+                    <li>Section 6: Zia Yusuf and diverse leadership</li>
+                    <li>Section 7: Muslims & minority communities</li>
+                    <li>Section 8: Broader implications – Overton Window</li>
+                    <li>Section 9: Scenario Analysis – futures 2025–2035</li>
+                    <li>Conclusion</li>
+                    <li>Endnotes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="toc-section" style="animation-delay: 0.8s;">
+            <div class="tier-header">
+                <div class="tier-title">Tier 2 – Muslim-Focused (Impacts & Futures)</div>
+                <div class="tier-subtitle">Britain's Populist Turn: Muslim Futures</div>
+            </div>
+
+            <div class="content-group">
+                <div class="content-number">1. Article</div>
+                <div class="content-title">"Caught in the Crossfire: What Britain's Populist Surge Means for Muslims"</div>
+                <ul class="content-list">
+                    <li>Introduction – Muslims at the centre of populist narratives</li>
+                    <li>Legal insecurity – ILR reform, loyalty tests</li>
+                    <li>Hate incidents & policing</li>
+                    <li>Contradictions (Zia Yusuf vs. anti-Muslim rhetoric)</li>
+                    <li>Community responses – mobilisation, resilience, emigration</li>
+                    <li>What's at stake</li>
+                </ul>
+            </div>
+
+            <div class="content-group">
+                <div class="content-number">2. Intelligence Brief</div>
+                <div class="content-title">"Muslim Community Risk Assessment: Populism and Policy Threats in the UK"</div>
+                <ul class="content-list">
+                    <li>Summary & Key Judgments</li>
+                    <li>Background – Muslim demographics, political context</li>
+                    <li>Policy Threats – ILR, migration caps, loyalty oaths</li>
+                    <li>Community Climate – hate crime, alienation, identity</li>
+                    <li>Economic & Workforce Impacts – NHS, care, tech</li>
+                    <li>Security Dimension – far-right vs. Islamist risks</li>
+                    <li>Scenario Analysis – 4 Muslim futures</li>
+                    <li>Recommendations – government, NGOs, Muslim leadership</li>
+                    <li>Annex: RAG Dashboard + Indicators</li>
+                </ul>
+            </div>
+
+            <div class="content-group">
+                <div class="content-number">3. White Paper</div>
+                <div class="content-title">"British Muslims and Right-Wing Populism: Risks, Realities, and Resilience"</div>
+                <ul class="content-list">
+                    <li>Executive Summary</li>
+                    <li>Introduction</li>
+                    <li>Historical context – Rushdie Affair → Prevent → Brexit</li>
+                    <li>Policy Threats (ILR, zero-net, citizenship tests)</li>
+                    <li>Social Climate (hate, policing, identity)</li>
+                    <li>Economic Dimensions (labour contributions, demographic narratives)</li>
+                    <li>Community Responses (political, legal, exit, resilience)</li>
+                    <li>Scenario Analysis – 2025–2035</li>
+                    <li>Recommendations – policy + community strategy</li>
+                    <li>Conclusion</li>
+                    <li>Endnotes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="toc-section" style="animation-delay: 1s;">
+            <div class="tier-header">
+                <div class="tier-title">Tier 3 – International & Comparative (Global Context)</div>
+                <div class="tier-subtitle">Britain's Populist Turn in Global Context</div>
+            </div>
+
+            <div class="content-group">
+                <div class="content-number">1. Article</div>
+                <div class="content-title">"Why Britain's Populism Isn't Just British"</div>
+                <ul class="content-list">
+                    <li>UK populism as part of global trends</li>
+                    <li>U.S. MAGA influence</li>
+                    <li>Israeli/pro-Israel networks</li>
+                    <li>European comparisons (France, Germany, Hungary, Poland)</li>
+                    <li>UK's distinct Brexit + street movement dynamic</li>
+                    <li>Global shocks shaping outcomes</li>
+                    <li>Conclusion – Britain embedded in a populist age</li>
+                </ul>
+            </div>
+
+            <div class="content-group">
+                <div class="content-number">2. Intelligence Brief</div>
+                <div class="content-title">"Foreign Influence and Comparative Populism: The UK in Context"</div>
+                <ul class="content-list">
+                    <li>Summary & Key Judgments</li>
+                    <li>Background – Brexit & populism</li>
+                    <li>U.S. influence (MAGA strategies, donor flows)</li>
+                    <li>Israeli/Hasbara dimensions</li>
+                    <li>European comparisons (NR, AfD, PiS, Fidesz)</li>
+                    <li>Digital ecosystems & transnational narratives</li>
+                    <li>Scenario Analysis – global shocks & UK futures</li>
+                    <li>Recommendations – resilience, counter-disinformation, foreign funding oversight</li>
+                    <li>Annex A: OSINT Source Reliability Table</li>
+                </ul>
+            </div>
+
+            <div class="content-group">
+                <div class="content-number">3. White Paper</div>
+                <div class="content-title">"Transnational Currents: UK Populism, Global Influences, and Comparative Lessons"</div>
+                <ul class="content-list">
+                    <li>Executive Summary</li>
+                    <li>Introduction – UK populism in global context</li>
+                    <li>U.S. Influence (Trump/MAGA)</li>
+                    <li>Israeli & pro-Israel networks (support vs. speculation)</li>
+                    <li>European comparisons (France, Germany, Hungary, Poland)</li>
+                    <li>Digital populism across borders</li>
+                    <li>Global Shocks – U.S. elections, Middle East, refugee flows</li>
+                    <li>Implications for the UK</li>
+                    <li>Recommendations – government, civil society, international partners</li>
+                    <li>Conclusion – Britain's populist future as global phenomenon</li>
+                    <li>Endnotes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="end-result">
+            <h2>End Result:</h2>
+            <ul>
+                <li><strong>Tier 1:</strong> Establishes the UK populist landscape.</li>
+                <li><strong>Tier 2:</strong> Dives into Muslim impacts & futures.</li>
+                <li><strong>Tier 3:</strong> Places the UK in a global comparative context.</li>
+            </ul>
+            <div class="summary-note">
+                Together, the series gives you a complete 3-layer framework: national → community → international.
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>© 2025 IRGIU / CANVI</div>
+            <div>CONFIDENTIAL</div>
+        </div>
+    </div>
+</body>
+</html>
