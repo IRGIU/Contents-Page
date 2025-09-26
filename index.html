@@ -71,58 +71,72 @@
         }
 
         .tier-header {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
         }
 
         .tier-title {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 400;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
 
         .tier-subtitle {
-            font-size: 14px;
-            opacity: 0.6;
+            font-size: 16px;
+            opacity: 0.5;
             font-style: italic;
         }
 
         .content-group {
-            margin-bottom: 40px;
-            padding-left: 30px;
-            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 50px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 30px;
+            border-left: 3px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .content-group:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-left-color: rgba(255, 255, 255, 0.6);
         }
 
         .content-number {
-            font-size: 18px;
+            font-size: 12px;
             font-weight: 500;
-            margin-bottom: 12px;
-            opacity: 0.9;
+            margin-bottom: 15px;
+            opacity: 0.5;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .content-title {
-            font-size: 16px;
-            margin-bottom: 15px;
+            font-size: 20px;
+            margin-bottom: 25px;
             font-weight: 400;
+            line-height: 1.4;
         }
 
         .content-list {
             list-style: none;
-            margin-left: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
         }
 
         .content-list li {
-            font-size: 14px;
+            font-size: 13px;
             opacity: 0.7;
-            margin-bottom: 8px;
             position: relative;
-            padding-left: 15px;
+            padding-left: 20px;
+            line-height: 1.6;
         }
 
         .content-list li:before {
-            content: "•";
+            content: "→";
             position: absolute;
             left: 0;
-            opacity: 0.5;
+            opacity: 0.4;
         }
 
         .end-result {
